@@ -1,0 +1,9 @@
+css 属性书写顺序规则   分3成
+
+-------------
+css 布局模型  position...
+-------------
+css 盒子模型  margin、height、width...
+-------------
+css 样式  color、background、font...
+-------------   
