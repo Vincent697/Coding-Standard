@@ -1,0 +1,31 @@
+/**
+ * record some usual css method
+ */
+
+/* 单行文本溢出… */
+.inaline
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 多行文本溢出… */
+.intwoline
+{
+    display: -webkit-box: !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;  /*限制在一个块元素显示的文本的行数。*/
+}
+
+/* clearfix 清除浮动解决方案 */
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
