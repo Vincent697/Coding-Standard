@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带间距的列表横向布局（负边距）.html</title>
+    <style>
+        body,ul,li {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul,li {
+            list-style: none;
+        }
+        pre{
+            text-align: center;
+        }
+        /* component css*/
+        .ul-wrap{
+            margin: 20px auto;
+            border: 1px red solid;
+            width: 460px;
+        }
+        .ul-wrap ul{
+            overflow: hidden;  /*BFC fix no height*/
+            margin-right: -20px;
+            margin-bottom: -10px;
+        }
+        .ul-wrap ul li{
+            height: 100px;
+            width: 100px;
+            background: #dddddd;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+
+        常规的在最右侧的元素 加上一个class 来控制不出现 右边距的方法
+        无疑是增加了代码的复杂性，当li是模版循环输出的话，带来了极大的不便捷性
+    
+    </pre>
+    <hr />
+    <div class="ul-wrap">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

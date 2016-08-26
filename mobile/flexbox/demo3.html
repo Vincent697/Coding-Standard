@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        h3{
+            line-height: 36px;
+            height: 36px;
+            padding-left: 20px;
+            background: #f2f2f2;
+            margin:20px 0;
+        }
+        p{margin:0;padding:0}
+        .f-icon {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #31BBEE;
+            flex:none;
+        }
+        .flex-cont{
+            /*定义为flexbox的"父元素"*/
+            display: -webkit-box; 
+            display: -webkit-flex;
+            display: flex;
+        }
+        .flex-item{
+            /*给"子元素"赋予自由伸缩的能力*/
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            width: 0%;
+        }
+
+        /*导航*/
+        .flex-nav{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            height: 44px;
+            line-height: 44px;
+            margin-bottom: 10px;
+            /*定义子元素垂直居中*/
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            /*子元素沿主轴对齐方式均分*/
+           /* -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;*/
+        }
+        .flex-nav .nav-title {
+            text-align: center;
+            line-height: 1.2;
+            width: 0%;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+            
+        .flex-nav .nav-title p{
+            color:#aaa;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h3>4.用flex做导航(只适合三个布局)</h3>
+    <div class="flex-cont flex-nav">
+        <button class="f-btn">btn</button>
+    <div class="nav-title">
+        <h2>The big title</h2>
+        <p>infomation</p>
+    </div>            
+        <button class="f-btn">btn</button>
+    </div> 
+    <div class="flex-cont flex-nav">
+        <button class="f-btn">btn</button>
+    <div class="nav-title">
+        <h2>The big title</h2>
+    </div>            
+        <button class="f-btn">btn</button>
+    </div> 
+</body>
+</html>
